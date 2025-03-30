@@ -426,9 +426,22 @@ footer button {
     font-size: 20px;
     background-color: #B38B6D;
     color: white;
-    padding: 10px;
     border-radius: 5px;
     margin-top: 10px;
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+/* Hover accordion content */
+.accordion-toggle:hover,
+.accordion-toggle:focus {
+    background-color: #B38B6D;
+    outline: none;
 }
 
 /* Hidden content revealed by accordion toggle */
@@ -727,6 +740,12 @@ padding: 40px 20px;
     background-color: #990000;
 }
 
+/* faq styling */
+.faq-section {
+    padding: 30px 20px;
+}
+
+
 
 /* ==============================
    Gift Shop - Call to Action Button
@@ -760,4 +779,10 @@ padding: 40px 20px;
 .cta-button:active {
     transform: scale(0.95);
     background-color: #800000;
+}
+
+/* Remove button style */
+.remove-from-cart {
+    background-color: #CC0000;
+    color: white;
 }

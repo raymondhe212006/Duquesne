@@ -263,6 +263,25 @@ if (window.location.href.includes("index.html")) {
 
 //History Page
 
+//accessibility for accordian
+document.querySelectorAll('.accordion-toggle').forEach((button) => {
+    button.addEventListener('click', () => {
+      const expanded = button.getAttribute('aria-expanded') === 'true';
+      const content = document.getElementById(button.getAttribute('aria-controls'));
+  
+      // Close all other panels (optional: for accordion behavior)
+      document.querySelectorAll('.accordion-toggle').forEach((btn) => {
+        const panel = document.getElementById(btn.getAttribute('aria-controls'));
+        btn.setAttribute('aria-expanded', 'false');
+        panel.hidden = true;
+      });
+  
+      // Toggle clicked panel
+      button.setAttribute('aria-expanded', !expanded);
+      content.hidden = expanded;
+    });
+});
+
 /* random fact */
 // Displays a random historical fact about the Duquesne Incline
 function showRandomFact() {
@@ -655,5 +674,37 @@ document.querySelectorAll(".add-to-cart").forEach((button) => {
       const countSpan = row.querySelector(".cart-count span");
       const currentCount = parseInt(countSpan.textContent);
       countSpan.textContent = currentCount + 1;
+    });
+});
+
+// Loop through all "Remove from Cart" buttons and attach a click listener
+document.querySelectorAll(".remove-from-cart").forEach((button) => {
+    button.addEventListener("click", () => {
+        const row = button.closest("tr");
+
+        // Get current product count
+        const countSpan = row.querySelector(".cart-count span");
+        let currentCount = parseInt(countSpan.textContent);
+
+        if (currentCount > 0) {
+            currentCount--;
+            countSpan.textContent = currentCount;
+
+            // Update global cart count and price
+            cartCount--;
+
+            const priceText = row.querySelector("td:nth-child(3)").textContent;
+            const price = parseFloat(priceText.replace("$", ""));
+            totalPrice -= price;
+
+            // Update cart summary
+            if (cartCount > 0) {
+                cartSummary.textContent = `🛒 You have ${cartCount} item${cartCount !== 1 ? "s" : ""} in your cart.`;
+                cartTotal.textContent = `Total: $${totalPrice.toFixed(2)}`;
+            } else {
+                cartSummary.textContent = `🛒 Your cart is empty.`;
+                cartTotal.textContent = "";
+            }
+        }
     });
 });
