@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata and Page Setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duquesne Incline</title>
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="static/style.css">
+
+    <!-- JavaScript file (deferred to load after HTML) -->
+    <script defer src="static/script.js"></script>
+</head>
+<body>
+
+    <!-- ==========================
+         Header and Navigation
+    =========================== -->
+    <header>
+        <!-- Logo and Site Title -->
+        <a href="index.html" class="logo-container" style="text-decoration: none;">
+            <img src="static/logo.png" alt="Website Logo" class="header-logo">
+            <div class="logo">Duquesne Incline</div>
+        </a>
+
+        <!-- Navigation Menu -->
+        <nav>
+            <div id="menu-icon">☰</div>
+            <div class="nav-links">
+              <a href="index.html">Home</a>
+              <a href="views/history.html">History</a>
+              <a href="views/visit.html">Visit Us</a>
+              <a href="views/store.html">Gift Shop</a>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- ==========================
+         Hero Section
+    =========================== -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>A Pittsburgh Landmark Since 1877</h1>
+            <p style="margin-bottom: 30px;">Experience history and breathtaking views from the famous Duquesne Incline.</p>
+            <a href="views/visit.html" class="cta-button">Plan Your Visit</a>
+        </div>
+    </section>
+
+    <!-- ==========================
+         Info Section: Hours & Weather
+    =========================== -->
+    <section class="info">
+        <!-- Operating Hours -->
+        <a href="views/visit.html" class="hours" style="text-decoration: none; color: inherit;">
+            <h2>Hours of Operation</h2>
+            <p>Mon–Sun: 6:30 AM – 12:30 AM</p>
+        </a>
+        <!-- Current Weather (loaded by JS) -->
+        <div class="weather">
+            <h2>Current Weather</h2>
+            <p id="weather-data">Loading weather data...</p>
+        </div>
+    </section>
+    
+    <!-- ==========================
+         Image Carousel Section
+    =========================== -->
+    <section class="gallery">
+        <h2>Photo Gallery</h2>
+        <div class="carousel">
+            <!-- Carousel Previous Button -->
+            <button class="carousel-btn prev">&#10094;</button>
+
+            <!-- Image Track Container -->
+            <div class="carousel-track-container">
+                <div class="carousel-track">
+                    <img src="static/image1.jpg" alt="Incline Image 1">
+                    <img src="static/image2.jpg" alt="Incline Image 2">
+                    <img src="static/image3.jpg" alt="Incline Image 3">
+                    <img src="static/image4.jpg" alt="Incline Image 4">
+                    <img src="static/image5.jpg" alt="Incline Image 5">
+                    <img src="static/image6.jpg" alt="Incline Image 6">
+                </div>
+            </div>
+
+             <!-- Carousel Next Button -->
+            <button class="carousel-btn next">&#10095;</button>
+        </div>
+    </section>
+</body>
+
+    
+<!-- ==========================
+    Footer Section
+=========================== -->
+<footer>
+    <div class="footer-content">
+        <!-- Copyright -->
+        <p>&copy; <span id="year"></span> Duquesne Incline. All Rights Reserved.</p>
+
+        <!-- Footer Top Grid: Contact Info -->
+        <div class="footer-top">
+
+            <!-- Parking Info -->
+            <div class="footer-box">
+                <h4>Parking</h4>
+                <p>1197 West Carson St.<br>Pittsburgh, PA 15219</p>
+            </div>
+        
+            <!-- Contact Info -->
+            <div class="footer-box">
+                <h4>Contact</h4>
+                <p>
+                Phone: 412.381.1665<br>
+                <a href="mailto:duq.incline@duquesneincline.org">duq.incline@duquesneincline.org</a>
+                </p>
+                <div class="social-links">
+                    <a href="https://twitter.com/DuquesneIncline" target="_blank" aria-label="Duquesne Incline Twitter">
+                      <img src="static/twitter.png" alt="Twitter" class="social-icon">
+                    </a>
+                    <a href="https://en.wikipedia.org/wiki/Duquesne_Incline" target="_blank" aria-label="Duquesne Incline Wikipedia">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Wikipedia-logo-v2.svg" alt="Wikipedia" class="social-icon">
+                    </a>
+                </div>
+            </div>
+        
+            <!-- Mailing & Accessibility -->
+            <div class="footer-box">
+                <h4>Mailing Address & Accessibility</h4>
+                <p>
+                1220 Grandview Ave.<br>
+                Pittsburgh, PA 15211
+                </p>
+            </div>
+        </div>
+
+        <!-- Email Signup Form -->
+        <h4>Join our Mailing List!</h4>
+        <div class="form-wrapper">
+            <form >
+                <div class="form-group">
+                    <label for="name">Name (required):</label>
+                    <input type="text" id="name" name="name" required minlength="1" maxlength="100">
+                </div>
+            
+                <div class="form-group">
+                    <label for="email">Email address (required):</label>
+                    <input type="email" id="email" name="email" required maxlength="100">
+                </div>
+            
+                <div class="form-group">
+                    <label for="sms_opt_in">Receive SMS text?</label>
+                    <input type="checkbox" id="sms_opt_in" name="sms_opt_in">
+                </div>
+            
+                <div class="form-group" id="mobile-wrapper" style="display: none;">
+                    <label for="mobile">Mobile phone (required):</label>
+                    <input type="tel" id="mobile" name="mobile" pattern="^\d{10}$" minlength="10" maxlength="10" placeholder="1234567890">
+                </div>
+            
+                <div class="form-group">
+                    <label for="zip">Zip code (optional):</label>
+                    <input type="text" id="zip" name="zip" pattern="^\d{5}$" minlength="5" maxlength="5" placeholder="12345">
+                </div>
+            
+                <div class="form-button">
+                    <button type="submit" onclick="return validateEmailForm()">Subscribe</button>
+                </div>
+                <div id="formError" class="error-message"></div>
+            </form>
+        </div>
+    </div>
+</footer>
+</html>

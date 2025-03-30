@@ -1,0 +1,763 @@
+/* ==============================
+   Base Layout and Global Styles
+   ============================== */
+
+/* Remove default spacing and prevent horizontal scrolling */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+  
+/* Set global font, background, and text color */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F5F5F5;
+    color: #003366;
+}
+
+/* ==============================
+   Typography
+   ============================== */
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+/* ==============================
+   Header & Navigation
+   ============================== */
+
+/* Header container with horizontal layout */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #003366;
+    color: white;
+}
+
+/* Logo container styles */
+.logo-container {
+    display: flex;
+    align-items: center;
+    color: inherit;
+}
+
+/* Image logo styling */
+.header-logo {
+    width: 60px;
+    height: auto;
+    margin-right: 20px;
+}
+
+/* Text logo styling */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Nav layout for desktop */
+nav {
+    display: flex;
+    gap: 20px; 
+    align-items: center;
+}
+
+/* Nav links default styling */
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+/* Hover effect for nav links */
+nav a:hover {
+    background-color: #CC0000;
+    transform: scale(1.05);
+}
+
+/* Active nav link styling */
+nav a.active {
+    background-color: #CC0000;
+    transform: scale(1.05);
+}
+
+/* Hamburger menu icon for mobile */
+#menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+
+/* ==============================
+   Responsive Navigation (Mobile)
+   ============================== */
+
+@media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      flex-direction: column;
+      background-color: #003366;
+      padding: 12px 16px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+  
+    /* Show nav menu when active */
+    .nav-links.active {
+      display: flex;
+      width: 150px;
+    }
+  
+    /* Show hamburger icon */
+    #menu-icon {
+      display: block;
+    }
+  
+    /* Adjust nav links for vertical layout */
+    .nav-links a {
+      margin: 8px 0;
+      padding: 8px;
+      border-radius: 5px;
+      text-align: right;
+    }
+}
+
+
+/* ==============================
+   Hero Section
+   ============================== */
+.hero {
+    background: url("hero.jpg") center/cover no-repeat;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    flex-direction: column;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Call-to-action button style */
+.cta-button {
+    background-color: #CC0000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+/* ==============================
+   Info Section
+   ============================== */
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background: #B38B6D;
+    color: white;
+    text-align: center;
+}
+
+
+/* ==============================
+   Gallery & Carousel
+   ============================== */
+
+.gallery {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Carousel wrapper */
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Track container (viewport) */
+.carousel-track-container {
+    overflow: hidden;
+    width: 80%;
+}
+
+/* Track that slides images */
+.carousel-track {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Carousel images */
+.carousel-track img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Carousel navigation buttons */
+.carousel-btn {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+}
+
+/* Button positioning */
+.prev {
+    left: 10px;
+}
+.next {
+    right: 10px;
+}
+
+
+/* ==============================
+   Footer Section
+   ============================== */
+
+footer {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Content inside the footer */
+.footer-content > p {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 14px;
+}
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px 0px;
+    color: white;
+}
+  
+/* Footer top layout */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 0px;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* Footer title styling */
+.footer-box h4 {
+    margin-bottom: 8px; 
+    font-size: 16px;
+    color: #F5F5F5;
+}
+
+/* Footer paragraph styling */
+.footer-box p {
+    margin-top: 0; 
+    line-height: 1.1;
+}
+
+/* Highlight email links in the footer */
+a[href^="mailto:"] {
+    color: #FFDD57; 
+    text-decoration: underline;
+}
+
+/* Footer column layout */
+.footer-box {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Social media icon formatting*/
+.social-links {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .social-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s ease;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.15);
+  }
+
+/* Form inside footer */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+    justify-content: center; 
+    max-width: 1200px;         
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 180px;
+}
+
+.form-group label {
+    margin-bottom: 4px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"] {
+    padding: 6px;
+    max-width: 180px;
+}
+
+.form-group input[type="checkbox"] {
+    margin-top: 10px;
+    transform: scale(1.2);
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Email input field styling */
+footer input {
+    padding: 8px;
+    margin-right: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Submit button styling */
+footer button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background: #CC0000;
+    color: white;
+    cursor: pointer;
+}
+
+.form-button {
+    flex: 1 0 100%;
+    margin-top: 10px;
+}
+
+/* Error message below email input */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 0px; 
+    margin-bottom: 10px; 
+    display: block; 
+}
+
+
+
+
+/* ==============================
+   History Page Styling
+   ============================== */
+
+/* Container for the entire history page content */
+.history-page {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Remove default left padding and align bullet points */
+.history-page ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+/* Space out individual list items */
+.history-page li {
+    margin-bottom: 10px;
+}
+
+
+/* ==============================
+   Accordion Section
+   ============================== */
+
+/* Button to toggle accordion content */
+.accordion-toggle {
+    cursor: pointer;
+    font-size: 20px;
+    background-color: #B38B6D;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Hidden content revealed by accordion toggle */
+.accordion-content {
+    display: none;
+    padding: 10px;
+    background-color: #eee;
+    border-left: 5px solid #B38B6D;
+    margin-bottom: 10px;
+}
+
+
+/* ==============================
+   Timeline Section
+   ============================== */
+
+/* Main timeline section wrapper */
+.timeline-section {
+    padding: 40px 20px 90px;
+    text-align: center;
+    position: relative;
+}
+
+/* Horizontal timeline line */
+.timeline-line {
+    position: relative;
+    height: 6px;
+    background-color: #003366;
+    margin: 60px auto 40px;
+    width: 100%;
+    max-width: 2000px;
+    border-radius: 3px;
+}
+
+/* Individual circular timeline point */
+.timeline-point {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: #CC0000;
+    border: 3px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Hover effect for timeline points */
+.timeline-point:hover {
+    background-color: #A30000;
+}
+
+/* Container for timeline point and label */
+.timeline-labeled-point {
+    position: absolute;
+    display: flex;
+    flex-direction: column-reverse; 
+    align-items: center;
+    transform: translateY(-50%);
+}
+
+/* Label that appears above timeline point */
+.timeline-label {
+    margin-bottom: 50px; 
+    font-size: 14px;
+    color: #003366;
+    white-space: nowrap;
+}
+
+/* Popup that shows event info when a timeline point is clicked */
+.timeline-popup {
+    position: absolute;
+    background: white;
+    border: 2px solid #003366;
+    border-radius: 12px;
+    padding: 15px;
+    width: 250px;
+    top: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+/* Styling for the popup's heading */
+.timeline-popup h3 {
+    color: #CC0000;
+    margin-top: 0;
+}
+
+/* Hide the popup by default */
+.timeline-popup.hidden {
+    display: none;
+}
+
+
+/* ==============================
+   Timeline Range Bars
+   ============================== */
+
+/* Horizontal bar that spans a range on the timeline */
+.timeline-range-bar {
+    position: absolute;
+    height: 4px;
+    background-color: #B38B6D;
+    top: 50%;
+    transform: translateY(12px); /* offset below the timeline line */
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+/* Arrow styling at start and end of the range bar */
+.timeline-range-bar::before,
+.timeline-range-bar::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.timeline-range-bar::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 8px 6px 0;
+    border-color: transparent #B38B6D transparent transparent;
+}
+
+.timeline-range-bar::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -10px; 
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 0 6px 8px;
+    border-color: transparent transparent transparent #B38B6D;
+}
+
+
+/* ==============================
+   Video Section
+   ============================== */
+
+/* Wrapper for the video section */
+.video-section {
+text-align: center;
+padding: 40px 20px;
+}
+
+/* Responsive video container for 16:9 aspect ratio */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Embed video iframe to fit inside the container */
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* ==============================
+   Fun Facts Section
+   ============================== */
+
+/* Button styling for showing a random fact */
+.facts button {
+    background-color: #CC0000; 
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 15px;
+}
+
+/* Hover effect for fact button */
+.facts button:hover {
+    background-color: #A30000;
+    transform: scale(1.05);
+}
+
+/* Styling for the displayed random fact text */
+.facts #random-fact {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #003366; 
+}
+
+
+
+
+/* ==============================
+   Visit Page - Map Legend Styles
+   ============================== */
+
+/* Container for the map legend box */
+.map-legend {
+    max-width: 930px;
+    margin: 20px auto 30px auto;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #003366;
+}
+  
+/* Legend title */
+.map-legend h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #003366;
+}
+  
+/* List of legend items (no bullets, horizontal wrap) */
+.map-legend ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Individual legend item (icon + label) */
+.map-legend li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Icon inside each legend item */
+.map-legend img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Formatting for the fares section*/
+.fare-sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 15px;
+}
+  
+.fare-column {
+    flex: 1 1 300px;
+    max-width: 600px;
+}
+  
+.fare-column h3 {
+    margin-top: 0;
+}
+
+/* Reserve button formating*/
+.reserve-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #cc0000;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+  
+.reserve-button:hover {
+    background-color: #990000;
+}
+
+
+/* ==============================
+   Gift Shop - Call to Action Button
+   ============================== */
+
+.gift-page {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Primary styling for the "Add to Cart" or main action button */
+.cta-button {
+    background-color: #CC0000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+/* Hover state: slightly darker red and scale up */
+.cta-button:hover {
+    background-color: #A30000;
+    transform: scale(1.05);
+}
+
+/* Active state: darker red and pressed-in effect */
+.cta-button:active {
+    transform: scale(0.95);
+    background-color: #800000;
+}

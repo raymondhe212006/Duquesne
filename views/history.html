@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Page Setup -->
+   <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>History - Duquesne Incline</title>
+
+    <!-- Stylesheet and JavaScript -->
+    <link rel="stylesheet" href="../static/style.css" />
+    <script defer src="../static/script.js"></script>
+</head>
+<body>
+  <!-- ==========================
+       Header and Navigation
+  =========================== -->
+    <header>
+        <!-- Logo that links to homepage -->
+        <a href="../index.html" class="logo-container" style="text-decoration: none;">
+            <img src="../static/logo.png" alt="Website Logo" class="header-logo">
+            <div class="logo">Duquesne Incline</div>
+        </a>
+
+        <!-- Navigation Links -->
+        <nav>
+            <div id="menu-icon">☰</div>
+            <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="history.html">History</a>
+            <a href="visit.html">Visit Us</a>
+            <a href="store.html">Gift Shop</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ==========================
+       Main Content: History Page
+        =========================== -->
+    <main class="history-page">
+
+        <!-- Hero Section -->
+        <section class="page-hero">
+        <h1>History of the Duquesne Incline</h1>
+        </section>
+
+        <!-- Accordion FAQ Section -->
+        <section class="desc">
+            <div class="faq-item">
+                <h3 class="accordion-toggle">Origins and Early History</h3>
+                <div class="accordion-content">
+                <p>
+                    The Duquesne Incline is one of those which follows very closely the tracks of an early coal hoist. Old newspapers indicate the existence of such a conveyance as early as 1854. Residents apparently referred to it as "Kirk Lewis' incline" and located it on the present site of The Duquesne Incline's Upper Station. Grandview Avenue was then the High Street, and the area was just beginning to be converted from farmland to homesites. This pleasantly-situated acreage was an excellent area to absorb some of the expanding population of the city, but the problem of easy access was still to be solved.
+                </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="accordion-toggle">Construction and Engineering</h3>
+                <div class="accordion-content">
+                <p>
+                    Although plans for a freight and passenger incline are known to have existed much earlier, financial backing was exceedingly hard to find--even the modest sum of $47,000--and actual construction was delayed. Eventually, of course, difficulties were overcome and the Incline was built. It was opened to the public May 20, 1877. The Duquesne Incline was the first Pittsburgh incline designed and built by Samuel Diescher, for Kirk Bigham and Associates. Mr. Diescher, an engineer, had become the country's foremost builder of inclines. He was also to design and build most of those that followed.
+                </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="accordion-toggle">Operation and Preservation</h3>
+                <div class="accordion-content">
+                <p>
+                    At the time of its public opening, it was one of four inclined planes serving the summit of Coal Hill, which later came to be known as Mount Washington. The Duquesne Incline was operated, from 1877 until 1962 by The Duquesne Inclined Plane Company. From 1964 until the present, the Incline has been operated by the Society for the Preservation of The Duquesne Heights Incline; it has been owned by the Port Authority of Allegheny County.
+                </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="accordion-toggle">The Society for the Preservation of the Duquesne Heights Incline</h3>
+                <div class="accordion-content">
+                <p>
+                    The Society for the Preservation of the Duquesne Heights Incline was formed in 1964 by the Duquesne Heights/Mount Washington neighborhood group that had rescued, repaired, and reopened the Incline in 1963. The purpose was to continue to restore and rehabilitate the cars, equipment, and both stations, and to establish the entire operation as a reliable commuter facility and a popular visitor attraction.  Memberships in the society are available, call for details.
+                </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Timeline Section -->
+        <section class="timeline-section">
+            <h2>Timeline</h2>
+            <!-- Timeline Line with Events -->
+            <div class="timeline-line">
+                <div class="timeline-labeled-point">
+                <div class="timeline-point" data-year="1854" data-description="Earliest coal hoist existed, known as 'Kirk Lewis’ incline.'"></div>
+                <div class="timeline-label">1854</div>
+                </div>
+                <div class="timeline-labeled-point">
+                <div class="timeline-point" data-year="1877" data-description="Incline opens to the public on May 20, designed by Samuel Diescher."></div>
+                <div class="timeline-label">1877</div>
+                </div>
+                <div class="timeline-labeled-point">
+                <div class="timeline-point" data-year="1877–1963" data-description="Operated by The Duquesne Inclined Plane Company."></div>
+                <div class="timeline-label">1877–1962</div>
+                </div>
+                <div class="timeline-labeled-point">
+                <div class="timeline-point" data-year="1963" data-description="Rescued and reopened by local residents."></div>
+                <div class="timeline-label">1963</div>
+                </div>
+                <div class="timeline-labeled-point">
+                <div class="timeline-point" data-year="1964–Now" data-description="Operated by the Society for the Preservation of the Duquesne Heights Incline."></div>
+                <div class="timeline-label">1964–Now</div>
+                </div>
+            </div>
+            <!-- Popup displayed when timeline point is clicked -->
+            <div id="timeline-popup" class="timeline-popup hidden">
+            <h3 id="popup-year"></h3>
+            <p id="popup-description"></p>
+            </div>
+        </section>
+
+        <!-- Embedded YouTube Video -->
+        <section class="video-section">
+            <h2>Watch the Incline in Action</h2>
+            <div class="video-container">
+            <iframe 
+                width="100%" 
+                height="400" 
+                src="https://www.youtube.com/embed/ve3KMUIlSGk" 
+                title="Duquesne Incline Video" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+            </div>
+        </section>
+
+        <!-- Random Fact Button Section -->
+        <section class="facts">
+            <h2>Quick Fact</h2>
+            <p id="random-fact">Click the button to learn a fun fact about the Duquesne Incline!</p>
+            <button onclick="showRandomFact()">Get Random Fact</button>
+        </section>
+    </main>
+</body>
+
+<!-- ==========================
+    Footer Section
+=========================== -->
+<footer>
+    <div class="footer-content">
+        <!-- Copyright -->
+        <p>&copy; <span id="year"></span> Duquesne Incline. All Rights Reserved.</p>
+
+        <!-- Footer Top Grid: Contact Info -->
+        <div class="footer-top">
+
+            <!-- Parking Info -->
+            <div class="footer-box">
+                <h4>Parking</h4>
+                <p>1197 West Carson St.<br>Pittsburgh, PA 15219</p>
+            </div>
+        
+            <!-- Contact Info -->
+            <div class="footer-box">
+                <h4>Contact</h4>
+                <p>
+                Phone: 412.381.1665<br>
+                <a href="mailto:duq.incline@duquesneincline.org">duq.incline@duquesneincline.org</a>
+                </p>
+                <div class="social-links">
+                    <a href="https://twitter.com/DuquesneIncline" target="_blank" aria-label="Duquesne Incline Twitter">
+                      <img src="../static/twitter.png" alt="Twitter" class="social-icon">
+                    </a>
+                    <a href="https://en.wikipedia.org/wiki/Duquesne_Incline" target="_blank" aria-label="Duquesne Incline Wikipedia">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Wikipedia-logo-v2.svg" alt="Wikipedia" class="social-icon">
+                    </a>
+                </div>
+            </div>
+        
+            <!-- Mailing & Accessibility -->
+            <div class="footer-box">
+                <h4>Mailing Address & Accessibility</h4>
+                <p>
+                1220 Grandview Ave.<br>
+                Pittsburgh, PA 15211
+                </p>
+            </div>
+        </div>
+
+        <!-- Email Signup Form -->
+        <h4>Join our Mailing List!</h4>
+        <div class="form-wrapper">
+            <form >
+                <div class="form-group">
+                    <label for="name">Name (required):</label>
+                    <input type="text" id="name" name="name" required minlength="1" maxlength="100">
+                </div>
+            
+                <div class="form-group">
+                    <label for="email">Email address (required):</label>
+                    <input type="email" id="email" name="email" required maxlength="100">
+                </div>
+            
+                <div class="form-group">
+                    <label for="sms_opt_in">Receive SMS text?</label>
+                    <input type="checkbox" id="sms_opt_in" name="sms_opt_in">
+                </div>
+            
+                <div class="form-group" id="mobile-wrapper" style="display: none;">
+                    <label for="mobile">Mobile phone (required):</label>
+                    <input type="tel" id="mobile" name="mobile" pattern="^\d{10}$" minlength="10" maxlength="10" placeholder="1234567890">
+                </div>
+            
+                <div class="form-group">
+                    <label for="zip">Zip code (optional):</label>
+                    <input type="text" id="zip" name="zip" pattern="^\d{5}$" minlength="5" maxlength="5" placeholder="12345">
+                </div>
+            
+                <div class="form-button">
+                    <button type="submit" onclick="return validateEmailForm()">Subscribe</button>
+                </div>
+                <div id="formError" class="error-message"></div>
+            </form>
+        </div>
+    </div>
+</footer>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata and Resources -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Gift Shop - Duquesne Incline</title>
+
+    <!-- Stylesheet and JavaScript -->
+    <link rel="stylesheet" href="../static/style.css" />
+    <script defer src="../static/script.js"></script>
+</head>
+<body>
+
+    <!-- ==========================
+       Header with Navigation
+    =========================== -->
+    <header>
+        <!-- Logo linked to homepage -->
+        <a href="../index.html" class="logo-container" style="text-decoration: none;">
+        <img src="../static/logo.png" alt="Website Logo" class="header-logo">
+        <div class="logo">Duquesne Incline</div>
+        </a>
+
+        <!-- Navigation links -->
+        <nav>
+            <div id="menu-icon">☰</div>
+            <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="history.html">History</a>
+            <a href="visit.html">Visit Us</a>
+            <a href="store.html">Gift Shop</a>
+            </div>
+        </nav>
+</header>
+
+<!-- ==========================
+    Gift Shop Main Content
+=========================== -->
+<main class="gift-page">
+    <!-- Page Heading -->
+    <h1>Gift Shop</h1>
+    <p style="text-align: center;">
+        Take home a piece of Pittsburgh! Browse our collection of souvenirs and unique gifts.
+        All types of pictures framed and unframed and custom designed shirts available at our gift shop on location.
+    </p>
+
+    <!-- ==========================
+         Product Table
+    =========================== -->
+    <section class="giftshop-table" style="max-width: 1500px; margin: auto; overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+            <thead style="background-color: #003366; color: white;">
+            <tr>
+                <th style="padding: 12px;">Image</th>
+                <th style="padding: 12px;">Product</th>
+                <th style="padding: 12px;">Price</th>
+                <th style="padding: 12px;">Add to Cart</th>
+                <th style="padding: 12px;">In Cart</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr style="background-color: #fff;">
+                <td style="padding: 10px; text-align: center;">
+                <img src="../static/souvenir1.jpg" alt="Incline Mug" width="300" />
+                </td>
+                <td style="padding: 10px;">Incline Shot Glasses</td>
+                <td style="padding: 10px;">$12.00</td>
+                <td style="padding: 10px;"><button class="cta-button add-to-cart">Add to Cart</button></td>
+                <td style="padding: 10px;" class="cart-count"><span>0</span></td>
+            </tr>
+
+            <tr style="background-color: #f9f9f9;">
+                <td style="padding: 10px; text-align: center;">
+                <img src="../static/souvenir2.jpg" alt="Ornament" width="300" />
+                </td>
+                <td style="padding: 10px;">Handmade Incline Wooden Ornament</td>
+                <td style="padding: 10px;">$10.00</td>
+                <td style="padding: 10px;"><button class="cta-button add-to-cart">Add to Cart</button></td>
+                <td style="padding: 10px;" class="cart-count"><span>0</span></td>
+            </tr>
+
+            <tr style="background-color: #fff;">
+                <td style="padding: 10px; text-align: center;">
+                <img src="../static/souvenir3.jpg" alt="Metal Plate" width="300" />
+                </td>
+                <td style="padding: 10px;">Wendell August Forge Metal Plates</td>
+                <td style="padding: 10px;">$20.00</td>
+                <td style="padding: 10px;"><button class="cta-button add-to-cart">Add to Cart</button></td>
+                <td style="padding: 10px;" class="cart-count"><span>0</span></td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- ==========================
+         Cart Summary Section
+    =========================== -->
+    <section style="text-align: center; margin-top: 30px;">
+        <h2>Cart Summary</h2>
+        <p id="cart-summary">🛒 Your cart is empty.</p>
+        <p id="cart-total" style="font-weight: bold;"></p>
+
+        <!-- Checkout button -->
+        <a href="https://example.com/checkout" class="cta-button" style="margin-top: 15px; display: inline-block;">Pay Now</a>
+    </section>
+  </main>
+</body>
+
+<!-- ==========================
+    Footer Section
+=========================== -->
+<footer>
+    <div class="footer-content">
+        <!-- Copyright -->
+        <p>&copy; <span id="year"></span> Duquesne Incline. All Rights Reserved.</p>
+
+        <!-- Footer Top Grid: Contact Info -->
+        <div class="footer-top">
+
+            <!-- Parking Info -->
+            <div class="footer-box">
+                <h4>Parking</h4>
+                <p>1197 West Carson St.<br>Pittsburgh, PA 15219</p>
+            </div>
+        
+            <!-- Contact Info -->
+            <div class="footer-box">
+                <h4>Contact</h4>
+                <p>
+                Phone: 412.381.1665<br>
+                <a href="mailto:duq.incline@duquesneincline.org">duq.incline@duquesneincline.org</a>
+                </p>
+                <div class="social-links">
+                    <a href="https://twitter.com/DuquesneIncline" target="_blank" aria-label="Duquesne Incline Twitter">
+                      <img src="../static/twitter.png" alt="Twitter" class="social-icon">
+                    </a>
+                    <a href="https://en.wikipedia.org/wiki/Duquesne_Incline" target="_blank" aria-label="Duquesne Incline Wikipedia">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Wikipedia-logo-v2.svg" alt="Wikipedia" class="social-icon">
+                    </a>
+                </div>
+            </div>
+        
+            <!-- Mailing & Accessibility -->
+            <div class="footer-box">
+                <h4>Mailing Address & Accessibility</h4>
+                <p>
+                1220 Grandview Ave.<br>
+                Pittsburgh, PA 15211
+                </p>
+            </div>
+        </div>
+
+        <!-- Email Signup Form -->
+        <h4>Join our Mailing List!</h4>
+        <div class="form-wrapper">
+            <form >
+                <div class="form-group">
+                    <label for="name">Name (required):</label>
+                    <input type="text" id="name" name="name" required minlength="1" maxlength="100">
+                </div>
+            
+                <div class="form-group">
+                    <label for="email">Email address (required):</label>
+                    <input type="email" id="email" name="email" required maxlength="100">
+                </div>
+            
+                <div class="form-group">
+                    <label for="sms_opt_in">Receive SMS text?</label>
+                    <input type="checkbox" id="sms_opt_in" name="sms_opt_in">
+                </div>
+            
+                <div class="form-group" id="mobile-wrapper" style="display: none;">
+                    <label for="mobile">Mobile phone (required):</label>
+                    <input type="tel" id="mobile" name="mobile" pattern="^\d{10}$" minlength="10" maxlength="10" placeholder="1234567890">
+                </div>
+            
+                <div class="form-group">
+                    <label for="zip">Zip code (optional):</label>
+                    <input type="text" id="zip" name="zip" pattern="^\d{5}$" minlength="5" maxlength="5" placeholder="12345">
+                </div>
+            
+                <div class="form-button">
+                    <button type="submit" onclick="return validateEmailForm()">Subscribe</button>
+                </div>
+                <div id="formError" class="error-message"></div>
+            </form>
+        </div>
+    </div>
+</footer>
+</html>

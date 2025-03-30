@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata and resource linking -->
+    <meta charset="UTF-8">
+    <title>Visit Us - Duquesne Incline</title>
+
+    <!-- Stylesheet and JavaScript -->
+    <link rel="stylesheet" href="../static/style.css">
+    <script defer src="../static/script.js"></script>
+</head>
+<body>
+     <!-- ==========================
+         Header and Navigation
+    =========================== -->
+    <header>
+        <!-- Logo linking to homepage -->
+        <a href="../index.html" class="logo-container" style="text-decoration: none;">
+            <img src="../static/logo.png" alt="Website Logo" class="header-logo">
+            <div class="logo">Duquesne Incline</div>
+        </a>
+
+        <!-- Navigation links -->
+        <nav>
+            <div id="menu-icon">☰</div>
+            <div class="nav-links">
+              <a href="../index.html">Home</a>
+              <a href="history.html">History</a>
+              <a href="visit.html">Visit Us</a>
+              <a href="store.html">Gift Shop</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ==========================
+         Visit Page Introduction
+    =========================== -->
+    <section class="info">
+        <div>
+            <h2>Plan Your Visit</h2>
+            <p>Find directions, hours, fares, and FAQs here!</p>
+        </div>
+    </section>
+
+    <!-- ==========================
+         Map Section with Legend
+    =========================== -->
+    <section class="map-section">
+        <h2 style="text-align:center;">Our Location</h2>
+
+        <!-- Map legend explaining marker colors -->
+        <div class="map-legend">
+            <h4>Map Legend</h4>
+            <ul>
+              <li><img src="https://maps.google.com/mapfiles/ms/icons/blue-dot.png" alt="marker 1"> Duquesne Incline Locations</li>
+              <li><img src="https://maps.google.com/mapfiles/ms/icons/red-dot.png" alt="marker 2"> Dining</li>
+              <li><img src="https://maps.google.com/mapfiles/ms/icons/purple-dot.png" alt="marker 3"> Museums & Cultural Spots</li>
+              <li><img src="https://maps.google.com/mapfiles/ms/icons/green-dot.png" alt="marker 4"> Sports & Attractions</li>
+              <li><img src="https://maps.google.com/mapfiles/ms/icons/yellow-dot.png" alt="marker 5"> Other Locations</li>
+            </ul>
+        </div>
+
+        <!-- Google Map container -->
+        <div id="map" style="width: 100%; height: 500px; padding: 0 20px;"></div>
+    </section>
+
+    <!-- ==========================
+         Hours and Fare Information
+    =========================== -->
+    <section style="padding: 30px 20px;">
+        <h2 style="text-align:center;">Hours & Fares</h2>
+      
+        <!-- Basic visit information -->
+        <div style="text-align: center;">
+            <p><strong>Open:</strong> 365 Days a Year</p>
+            <p><strong>Hours:</strong> 6:30 a.m. – 12:30 a.m.</p>
+            <p><strong>Wheelchair Accessible:</strong> via the Upper Station at 1220 Grandview Avenue</p>
+            <p><strong>No Reservations or Advance Tickets Required</strong></p>
+            <p><strong>Payment Methods:</strong> Cash, Port Authority bus passes, and tickets accepted</p>
+        </div>
+      
+        <!-- Fare breakdown with educational group tours -->
+        <div class="fare-sections">
+            <div class="fare-column">
+            <h3>Standard Fares</h3>
+            <ul>
+                <li>Adults (12–64): $2.50 each way / $5.00 round trip</li>
+                <li>Children (6–11): $1.25 each way / $2.50 round trip</li>
+                <li>Children 5 and under: Free</li>
+            </ul>
+        
+            <h3>Seniors (65+)</h3>
+            <p>Ride free with PRT blue/yellow card or Senior Connect Card</p>
+
+            <h3>University Students (with valid ID)</h3>
+            <ul>
+                <li>University of Pittsburgh – Free</li>
+                <li>Carnegie Mellon University – Free</li>
+                <li>Chatham University – Free</li>
+            </ul>
+        
+            <h3>Group Rates (10+ people)</h3>
+            <ul>
+                <li>Adults: $1.75 each way / $3.50 round trip</li>
+                <li>Children (6–11): $1.00 each way / $1.75 round trip</li>
+            </ul>
+            </div>
+        
+            <div class="fare-column">
+                <h3>Field Trip Program for Students & Youth Groups</h3>
+                <p>
+                    A free field trip program is available for students and youth groups of ten or more daily –
+                    except Saturdays and Sundays after 12:00 noon due to weekend crowds and limited space. The
+                    program includes:
+                </p>
+                <ul>
+                    <li>A teacher's lesson packet for students' specific grade level</li>
+                    <li>A round trip ride on the Duquesne Incline</li>
+                    <li>A history of inclines in Pittsburgh</li>
+                    <li>A discussion about Pittsburgh's industrial past</li>
+                <li>
+                    A visit to the machine room to observe the original hoisting equipment in operation and
+                    learn about the engineers who built it
+                </li>
+                <li>
+                    A panoramic view of Downtown Pittsburgh and The North Shore from our observation deck 400
+                    feet above the three rivers
+                </li>
+                <li>A brief history of the French and Indian War from which the city arose</li>
+                </ul>
+                <a href="reserve.html" class="reserve-button">Reserve Now</a>
+            </div>
+        </div>
+          
+    </section>
+
+    <!-- ==========================
+         Frequently Asked Questions
+    =========================== -->
+    <section style="padding: 30px 20px;">
+        <h2 style="text-align:center;">Frequently Asked Questions</h2>
+        <div class="accordion-toggle">Is parking available?</div>
+        <div class="accordion-content">Yes, free parking is available near the lower station.</div>
+
+        <div class="accordion-toggle">Are pets allowed?</div>
+        <div class="accordion-content">Only service animals are allowed aboard the incline.</div>
+
+        <div class="accordion-toggle">Can I bring a stroller?</div>
+        <div class="accordion-content">Yes, but you may be asked to fold it during busy times.</div>
+
+        <div class="accordion-toggle">Is there a self-guided tour?</div>
+        <div class="accordion-content">Yes! Your visit includes a pictorial history of Pittsburgh’s industry, sports, and inclines, a machine room visit with the original 1877 equipment, and a panoramic view of Downtown Pittsburgh. Be sure to stop by the gift shop for postcards and souvenirs!</div>
+    
+        <div class="accordion-toggle">Are there other related tours in Pittsburgh?</div>
+        <div class="accordion-content">Yes! Check out <a href="https://www.mollystrolleyspgh.com">Molly's Tolleys</a> or call 412-281-2055</div>
+    </section>
+
+    <!-- ==========================
+         Gift Shop Preview Section
+    =========================== -->
+    <section class="gallery">
+        <h2>Gift Shop Preview</h2>
+
+        <!-- Product images -->
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+            <div>
+                <img src="../static/souvenir1.jpg" alt="Souvenir 1" style="width: 400px; border-radius: 8px;">
+                <p>Shot Glasses – $12</p>
+            </div>
+            <div>
+                <img src="../static/souvenir2.jpg" alt="Souvenir 2" style="width: 400px; border-radius: 8px;">
+                <p>Handmade Ornament – $10</p>
+            </div>
+        </div>
+
+        <!-- Link to full store -->
+        <p><a href="store.html" class="cta-button" style="margin-top: 10px;">View More</a></p>
+    </section>
+
+    <!-- ==========================
+         Google Maps API Script
+    =========================== -->
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzkjx5ov41AE2lz1oVhr6T_vO9GTpQMUU&callback=initMap">
+    </script>
+</body>
+
+<!-- ==========================
+    Footer Section
+=========================== -->
+<footer>
+    <div class="footer-content">
+        <!-- Copyright -->
+        <p>&copy; <span id="year"></span> Duquesne Incline. All Rights Reserved.</p>
+
+        <!-- Footer Top Grid: Contact Info -->
+        <div class="footer-top">
+
+            <!-- Parking Info -->
+            <div class="footer-box">
+                <h4>Parking</h4>
+                <p>1197 West Carson St.<br>Pittsburgh, PA 15219</p>
+            </div>
+        
+            <!-- Contact Info -->
+            <div class="footer-box">
+                <h4>Contact</h4>
+                <p>
+                Phone: 412.381.1665<br>
+                <a href="mailto:duq.incline@duquesneincline.org">duq.incline@duquesneincline.org</a>
+                </p>
+                <div class="social-links">
+                    <a href="https://twitter.com/DuquesneIncline" target="_blank" aria-label="Duquesne Incline Twitter">
+                      <img src="../static/twitter.png" alt="Twitter" class="social-icon">
+                    </a>
+                    <a href="https://en.wikipedia.org/wiki/Duquesne_Incline" target="_blank" aria-label="Duquesne Incline Wikipedia">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Wikipedia-logo-v2.svg" alt="Wikipedia" class="social-icon">
+                    </a>
+                </div>
+            </div>
+        
+            <!-- Mailing & Accessibility -->
+            <div class="footer-box">
+                <h4>Mailing Address & Accessibility</h4>
+                <p>
+                1220 Grandview Ave.<br>
+                Pittsburgh, PA 15211
+                </p>
+            </div>
+        </div>
+
+        <!-- Email Signup Form -->
+        <h4>Join our Mailing List!</h4>
+        <div class="form-wrapper">
+            <form >
+                <div class="form-group">
+                    <label for="name">Name (required):</label>
+                    <input type="text" id="name" name="name" required minlength="1" maxlength="100">
+                </div>
+            
+                <div class="form-group">
+                    <label for="email">Email address (required):</label>
+                    <input type="email" id="email" name="email" required maxlength="100">
+                </div>
+            
+                <div class="form-group">
+                    <label for="sms_opt_in">Receive SMS text?</label>
+                    <input type="checkbox" id="sms_opt_in" name="sms_opt_in">
+                </div>
+            
+                <div class="form-group" id="mobile-wrapper" style="display: none;">
+                    <label for="mobile">Mobile phone (required):</label>
+                    <input type="tel" id="mobile" name="mobile" pattern="^\d{10}$" minlength="10" maxlength="10" placeholder="1234567890">
+                </div>
+            
+                <div class="form-group">
+                    <label for="zip">Zip code (optional):</label>
+                    <input type="text" id="zip" name="zip" pattern="^\d{5}$" minlength="5" maxlength="5" placeholder="12345">
+                </div>
+            
+                <div class="form-button">
+                    <button type="submit" onclick="return validateEmailForm()">Subscribe</button>
+                </div>
+                <div id="formError" class="error-message"></div>
+            </form>
+        </div>
+    </div>
+</footer>
+</html>
