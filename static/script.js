@@ -344,32 +344,35 @@ function updateTimelinePositions() {
         wrapper.style.transform = "translate(-50%, -50%)";
 
         // Show popup with description when point is clicked
-        point.addEventListener("click", (e) => {
+        const activatePoint = () => {
             const popupYear = document.getElementById("popup-year");
             const popupDescription = document.getElementById("popup-description");
-
+      
             popupYear.textContent = yearStr;
             popupDescription.textContent = point.getAttribute("data-description");
-
-            // Calculate popup position based on point location
+      
             const pointRect = point.getBoundingClientRect();
             const containerRect = timelineLine.getBoundingClientRect();
             const pointCenterX = pointRect.left + pointRect.width / 2;
             const offsetX = pointCenterX - containerRect.left;
-
+      
             popup.style.left = `${offsetX}px`;
-
-            // Adjust popup alignment if near screen edges
+      
             const screenWidth = window.innerWidth;
             let xOffset = "-50%";
-            if (pointCenterX < 150) {
-                xOffset = "0";
-            } else if (pointCenterX > (screenWidth - 150)) {
-                xOffset = "-90%";
-            }
-
+            if (pointCenterX < 150) xOffset = "0";
+            else if (pointCenterX > (screenWidth - 150)) xOffset = "-90%";
+      
             popup.style.transform = `translate(${xOffset}, 20px)`;
             popup.classList.remove("hidden");
+          };
+      
+          point.addEventListener("click", activatePoint);
+          point.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              activatePoint();
+            }
         });
     });
 

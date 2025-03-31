@@ -95,33 +95,58 @@
             <h2>Timeline</h2>
             <!-- Timeline Line with Events -->
             <div class="timeline-line">
-                <div class="timeline-labeled-point">
-                <div class="timeline-point" data-year="1854" data-description="Earliest coal hoist existed, known as 'Kirk Lewis’ incline.'"></div>
+              <div class="timeline-labeled-point" style="position: absolute;">
+                <button class="timeline-point"
+                        data-year="1854"
+                        data-description="Earliest coal hoist existed, known as 'Kirk Lewis’ incline.'"
+                        aria-label="1854: Earliest coal hoist existed, known as Kirk Lewis’ incline.">
+                </button>
                 <div class="timeline-label">1854</div>
-                </div>
-                <div class="timeline-labeled-point">
-                <div class="timeline-point" data-year="1877" data-description="Incline opens to the public on May 20, designed by Samuel Diescher."></div>
+              </div>
+          
+              <div class="timeline-labeled-point" style="position: absolute;">
+                <button class="timeline-point"
+                        data-year="1877"
+                        data-description="Incline opens to the public on May 20, designed by Samuel Diescher."
+                        aria-label="1877: Incline opens to the public, designed by Samuel Diescher.">
+                </button>
                 <div class="timeline-label">1877</div>
-                </div>
-                <div class="timeline-labeled-point">
-                <div class="timeline-point" data-year="1877–1963" data-description="Operated by The Duquesne Inclined Plane Company."></div>
+              </div>
+          
+              <div class="timeline-labeled-point" style="position: absolute;">
+                <button class="timeline-point"
+                        data-year="1877–1962"
+                        data-description="Operated by The Duquesne Inclined Plane Company."
+                        aria-label="1877–1962: Operated by The Duquesne Inclined Plane Company.">
+                </button>
                 <div class="timeline-label">1877–1962</div>
-                </div>
-                <div class="timeline-labeled-point">
-                <div class="timeline-point" data-year="1963" data-description="Rescued and reopened by local residents."></div>
+              </div>
+          
+              <div class="timeline-labeled-point" style="position: absolute;">
+                <button class="timeline-point"
+                        data-year="1963"
+                        data-description="Rescued and reopened by local residents."
+                        aria-label="1963: Rescued and reopened by local residents.">
+                </button>
                 <div class="timeline-label">1963</div>
-                </div>
-                <div class="timeline-labeled-point">
-                <div class="timeline-point" data-year="1964–Now" data-description="Operated by the Society for the Preservation of the Duquesne Heights Incline."></div>
+              </div>
+          
+              <div class="timeline-labeled-point" style="position: absolute;">
+                <button class="timeline-point"
+                        data-year="1964–Now"
+                        data-description="Operated by the Society for the Preservation of the Duquesne Heights Incline."
+                        aria-label="1964–Now: Operated by the Society for the Preservation of the Duquesne Heights Incline.">
+                </button>
                 <div class="timeline-label">1964–Now</div>
-                </div>
+              </div>
             </div>
+          
             <!-- Popup displayed when timeline point is clicked -->
-            <div id="timeline-popup" class="timeline-popup hidden">
-            <h3 id="popup-year"></h3>
-            <p id="popup-description"></p>
+            <div id="timeline-popup" class="timeline-popup hidden" style="position: absolute;">
+              <h3 id="popup-year"></h3>
+              <p id="popup-description"></p>
             </div>
-        </section>
+          </section>
 
         <!-- Embedded YouTube Video -->
         <section class="video-section">
