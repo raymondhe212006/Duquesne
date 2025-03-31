@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <!-- Basic Page Setup -->
-   <meta charset="UTF-8"/>
+   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>History - Duquesne Incline</title>
 
@@ -169,87 +169,86 @@
             <button onclick="showRandomFact()">Get Random Fact</button>
         </section>
     </main>
+    <!-- ==========================
+        Footer Section
+    =========================== -->
+    <footer>
+        <div class="footer-content">
+            <!-- Copyright -->
+            <p>&copy; <span id="year"></span> Duquesne Incline. All Rights Reserved. <a href="citations.html" style="color: #FFDD57;">Citations</a></p>
+
+            <!-- Footer Top Grid: Contact Info -->
+            <div class="footer-top">
+
+                <!-- Parking Info -->
+                <div class="footer-box">
+                    <h4>Parking</h4>
+                    <p>1197 West Carson St.<br>Pittsburgh, PA 15219</p>
+                </div>
+            
+                <!-- Contact Info -->
+                <div class="footer-box">
+                    <h4>Contact</h4>
+                    <p>
+                    Phone: 412.381.1665<br>
+                    <a href="mailto:duq.incline@duquesneincline.org">duq.incline@duquesneincline.org</a>
+                    </p>
+                    <div class="social-links">
+                        <a href="https://twitter.com/DuquesneIncline" target="_blank" aria-label="Duquesne Incline Twitter">
+                        <img src="../static/twitter.png" alt="Twitter" class="social-icon">
+                        </a>
+                        <a href="https://en.wikipedia.org/wiki/Duquesne_Incline" target="_blank" aria-label="Duquesne Incline Wikipedia">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Wikipedia-logo-v2.svg" alt="Wikipedia" class="social-icon">
+                        </a>
+                    </div>
+                </div>
+            
+                <!-- Mailing & Accessibility -->
+                <div class="footer-box">
+                    <h4>Mailing Address & Accessibility</h4>
+                    <p>
+                    1220 Grandview Ave.<br>
+                    Pittsburgh, PA 15211
+                    </p>
+                </div>
+            </div>
+
+            <!-- Email Signup Form -->
+            <h4>Join our Mailing List!</h4>
+            <div class="form-wrapper">
+                <form >
+                    <div class="form-group">
+                        <label for="name">Name (required):</label>
+                        <input type="text" id="name" name="name" required minlength="1" maxlength="100">
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="email">Email address (required):</label>
+                        <input type="email" id="email" name="email" required maxlength="100">
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="sms_opt_in">Receive SMS text?</label>
+                        <input type="checkbox" id="sms_opt_in" name="sms_opt_in">
+                    </div>
+                
+                    <div class="form-group" id="mobile-wrapper" style="display: none;">
+                        <label for="mobile">Mobile phone (required):</label>
+                        <input type="tel" id="mobile" name="mobile" pattern="^\d{10}$" minlength="10" maxlength="10" placeholder="1234567890">
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="zip">Zip code (optional):</label>
+                        <input type="text" id="zip" name="zip" pattern="^\d{5}$" minlength="5" maxlength="5" placeholder="12345">
+                    </div>
+                
+                    <div class="form-button">
+                        <button type="submit" onclick="return validateEmailForm()">Subscribe</button>
+                    </div>
+                    <div id="formError" class="error-message"></div>
+                </form>
+            </div>
+        </div>
+    </footer>
 </body>
-
-<!-- ==========================
-    Footer Section
-=========================== -->
-<footer>
-    <div class="footer-content">
-        <!-- Copyright -->
-        <p>&copy; <span id="year"></span> Duquesne Incline. All Rights Reserved. <a href="citations.html" style="color: #FFDD57;">Citations</a></p>
-
-        <!-- Footer Top Grid: Contact Info -->
-        <div class="footer-top">
-
-            <!-- Parking Info -->
-            <div class="footer-box">
-                <h4>Parking</h4>
-                <p>1197 West Carson St.<br>Pittsburgh, PA 15219</p>
-            </div>
-        
-            <!-- Contact Info -->
-            <div class="footer-box">
-                <h4>Contact</h4>
-                <p>
-                Phone: 412.381.1665<br>
-                <a href="mailto:duq.incline@duquesneincline.org">duq.incline@duquesneincline.org</a>
-                </p>
-                <div class="social-links">
-                    <a href="https://twitter.com/DuquesneIncline" target="_blank" aria-label="Duquesne Incline Twitter">
-                      <img src="../static/twitter.png" alt="Twitter" class="social-icon">
-                    </a>
-                    <a href="https://en.wikipedia.org/wiki/Duquesne_Incline" target="_blank" aria-label="Duquesne Incline Wikipedia">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Wikipedia-logo-v2.svg" alt="Wikipedia" class="social-icon">
-                    </a>
-                </div>
-            </div>
-        
-            <!-- Mailing & Accessibility -->
-            <div class="footer-box">
-                <h4>Mailing Address & Accessibility</h4>
-                <p>
-                1220 Grandview Ave.<br>
-                Pittsburgh, PA 15211
-                </p>
-            </div>
-        </div>
-
-        <!-- Email Signup Form -->
-        <h4>Join our Mailing List!</h4>
-        <div class="form-wrapper">
-            <form >
-                <div class="form-group">
-                    <label for="name">Name (required):</label>
-                    <input type="text" id="name" name="name" required minlength="1" maxlength="100">
-                </div>
-            
-                <div class="form-group">
-                    <label for="email">Email address (required):</label>
-                    <input type="email" id="email" name="email" required maxlength="100">
-                </div>
-            
-                <div class="form-group">
-                    <label for="sms_opt_in">Receive SMS text?</label>
-                    <input type="checkbox" id="sms_opt_in" name="sms_opt_in">
-                </div>
-            
-                <div class="form-group" id="mobile-wrapper" style="display: none;">
-                    <label for="mobile">Mobile phone (required):</label>
-                    <input type="tel" id="mobile" name="mobile" pattern="^\d{10}$" minlength="10" maxlength="10" placeholder="1234567890">
-                </div>
-            
-                <div class="form-group">
-                    <label for="zip">Zip code (optional):</label>
-                    <input type="text" id="zip" name="zip" pattern="^\d{5}$" minlength="5" maxlength="5" placeholder="12345">
-                </div>
-            
-                <div class="form-button">
-                    <button type="submit" onclick="return validateEmailForm()">Subscribe</button>
-                </div>
-                <div id="formError" class="error-message"></div>
-            </form>
-        </div>
-    </div>
-</footer>
 </html>
