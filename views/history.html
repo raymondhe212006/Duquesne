@@ -3,11 +3,11 @@
 <head>
     <!-- Basic Page Setup -->
    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>History - Duquesne Incline</title>
 
     <!-- Stylesheet and JavaScript -->
-    <link rel="stylesheet" href="../static/style.css" />
+    <link rel="stylesheet" href="../static/style.css">
     <script defer src="../static/script.js"></script>
 </head>
 <body>
@@ -44,7 +44,7 @@
         </section>
 
         <!-- Accordion FAQ Section -->
-        <section class="desc">
+        <div class="desc">
             <div class="faq-item">
                 <button class="accordion-toggle" aria-expanded="false" aria-controls="panel1" id="toggle1">
                     Origins and Early History
@@ -88,7 +88,7 @@
                 </p>
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- Interactive Timeline Section -->
         <section class="timeline-section">
@@ -143,7 +143,7 @@
           
             <!-- Popup displayed when timeline point is clicked -->
             <div id="timeline-popup" class="timeline-popup hidden" style="position: absolute;">
-              <h3 id="popup-year"></h3>
+              <h3 id="popup-year">Select a point</h3>
               <p id="popup-description"></p>
             </div>
           </section>
@@ -152,16 +152,14 @@
         <section class="video-section">
             <h2>Watch the Incline in Action</h2>
             <div class="video-container">
-            <iframe 
-                width="100%" 
-                height="400" 
-                src="https://www.youtube.com/embed/ve3KMUIlSGk" 
-                title="Duquesne Incline Video" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
-            </div>
+                <iframe 
+                    style="width: 100%; height: 900px;"
+                    src="https://www.youtube.com/embed/ve3KMUIlSGk" 
+                    title="Duquesne Incline Video"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+                </div>
         </section>
 
         <!-- Random Fact Button Section -->
@@ -179,7 +177,7 @@
 <footer>
     <div class="footer-content">
         <!-- Copyright -->
-        <p>&copy; <span id="year"></span> Duquesne Incline. All Rights Reserved.</p>
+        <p>&copy; <span id="year"></span> Duquesne Incline. All Rights Reserved. <a href="citations.html" style="color: #FFDD57;">Citations</a></p>
 
         <!-- Footer Top Grid: Contact Info -->
         <div class="footer-top">
