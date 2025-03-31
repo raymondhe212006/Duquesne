@@ -263,18 +263,11 @@ if (window.location.href.includes("index.html")) {
 
 //History Page
 
-//accessibility for accordian
-document.querySelectorAll('.accordion-toggle').forEach((button) => {
+//accessibility for accordian his (changed to buttons)
+document.querySelectorAll('.accordionhis-toggle').forEach((button) => {
     button.addEventListener('click', () => {
       const expanded = button.getAttribute('aria-expanded') === 'true';
       const content = document.getElementById(button.getAttribute('aria-controls'));
-  
-      // Close all other panels (optional: for accordion behavior)
-      document.querySelectorAll('.accordion-toggle').forEach((btn) => {
-        const panel = document.getElementById(btn.getAttribute('aria-controls'));
-        btn.setAttribute('aria-expanded', 'false');
-        panel.hidden = true;
-      });
   
       // Toggle clicked panel
       button.setAttribute('aria-expanded', !expanded);
@@ -624,7 +617,7 @@ function initMap() {
 // Make the initMap function accessible globally (required by Google Maps API)
 window.initMap = initMap;
 
-//Event Listener for visit page
+//Event listener for visit page
 if (window.location.href.includes("visit.html")) {
     document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll(".accordion-toggle").forEach((toggle) => {
@@ -641,7 +634,6 @@ if (window.location.href.includes("visit.html")) {
         });
     });
 }
-
 
 /* Gift Shop */
 
