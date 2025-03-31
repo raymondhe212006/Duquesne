@@ -440,7 +440,7 @@ footer button {
 /* Hover accordion content */
 .accordion-toggle:hover,
 .accordion-toggle:focus {
-    background-color: #B38B6D;
+    background-color: #9a663f;
     outline: none;
 }
 
