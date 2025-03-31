@@ -560,35 +560,32 @@ function getMarkerIcon(loc) {
  * GoogleMaps API
  */
 function initMap() {
-    // Create and center the map around Duquesne
+    let openInfoWindow = null;
+
     const map = new google.maps.Map(document.getElementById("map"), {
       zoom: 14,
       center: { lat: 40.443, lng: -80.018 }
     });
-
+  
     const geocoder = new google.maps.Geocoder();
-
-    // Find the location labeled as Parking to center on
     const parkingLocation = locations.find(loc =>
       loc.title.toLowerCase().includes("parking")
     );
   
-    // Loop through all locations and place markers
-    locations.forEach(loc => {
+    const locationList = document.getElementById("location-list-ul");
+
+    locations.forEach((loc, i) => {
       geocoder.geocode({ address: loc.address }, (results, status) => {
         if (status === "OK" && results[0]) {
-          // Create a marker for each location
           const marker = new google.maps.Marker({
             map,
             position: results[0].geometry.location,
             title: loc.title,
             icon: getMarkerIcon(loc)
           });
-
-          // Create an info window for when marker is clicked
+  
           const infoWindow = new google.maps.InfoWindow({
-            content: 
-            `
+            content: `
               <div style="font-family: Roboto, sans-serif; max-width: 300px;">
                 <div style="display: flex; align-items: center; justify-content: space-between;">
                   <span style="font-weight: bold; font-size: 16px; color: #1a237e;">${loc.title}</span>
@@ -597,22 +594,45 @@ function initMap() {
               </div>
             `
           });
-          // Show info window on marker click
+  
+          //closes other open popups for accessibility users
           marker.addListener("click", () => {
+            if (openInfoWindow) {
+                openInfoWindow.close();
+            }
             infoWindow.open(map, marker);
+            openInfoWindow = infoWindow;
           });
-        
-          // If this is the parking location, center map on it and open info
+  
+          // Accessibility list item
+          const listItem = document.createElement("li");
+          listItem.innerHTML = `<button class="map-marker-button">${loc.title}</button>`;
+          listItem.querySelector("button").addEventListener("click", () => {
+            map.setCenter(marker.getPosition());
+            
+            if (openInfoWindow) {
+                openInfoWindow.close();
+            }
+            infoWindow.open(map, marker);
+            openInfoWindow = infoWindow;
+          });
+          locationList.appendChild(listItem);
+  
+          // Center on parking
           if (loc === parkingLocation) {
             map.setCenter(results[0].geometry.location);
+            
+            if (openInfoWindow) {
+                openInfoWindow.close();
+            }
             infoWindow.open(map, marker);
+            openInfoWindow = infoWindow;
           }
-        } else {
-          console.error(`Geocode failed for ${loc.title}: ${status}`);
         }
       });
     });
 }
+  
 
 // Make the initMap function accessible globally (required by Google Maps API)
 window.initMap = initMap;
@@ -632,7 +652,23 @@ if (window.location.href.includes("visit.html")) {
             }
         });
         });
+
+        // Toggle location list visibility
+        const toggleButton = document.getElementById("toggle-location-list");
+        const listContainer = document.getElementById("map-location-list");
+    
+        toggleButton.addEventListener("click", () => {
+        const isExpanded = toggleButton.getAttribute("aria-expanded") === "true";
+        toggleButton.setAttribute("aria-expanded", String(!isExpanded));
+        listContainer.hidden = isExpanded;
+    
+        toggleButton.textContent = isExpanded
+            ? "Show Accessible Location List"
+            : "Hide Accessible Location List";
+        });
     });
+
+
 }
 
 /* Gift Shop */
